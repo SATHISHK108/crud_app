@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="../static/editprofile.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Login</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-messages">
+        {% for category, message in messages %}
+          <div class="flash-message {{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+  <div class="container">
+    <h2>Edit Profile</h2>
+    <form action="/updateprofile" method="post">
+      <input type="text" name="username" value="{{ user.username }}" required><br>
+      <input type="email" name="email" value="{{ user.email }}" required><br>
+      <input type="tel" name="phone" value="{{ user.phone_number }}" required><br>
+      <input type="submit" value="Update">
+    </form>
+  </div>
+</body>
+</html>

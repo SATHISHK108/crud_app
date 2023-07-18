@@ -1,0 +1,120 @@
+/* Header Styles */
+header {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    font-size: 18px; /* Increase font size */
+    transition: text-shadow 0.3s ease; /* Add transition effect */
+  }
+  
+  nav li a:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow on hover */
+  }
+  
+  /* Profile Details Styles */
+  .profile-details {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .profile-details h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 16px; /* Increase font size */
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #333;
+  }
+  
+  /* Profile Actions Styles */
+  .profile-actions {
+    text-align: center;
+    margin-top: 20px;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+  }
+  
+  .edit-link {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Add margin between the link and button */
+  }
+  
+  .delete-button {
+    display: inline-block;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .edit-link:hover {
+    background-color: #45a049;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+  }
+  
+  /* .delete-button {
+    display: inline-block;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;} /* Add margin between buttons */
+
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+  }
+  .flash-messages {
+    margin-bottom: 20px;
+  }
+  .flash-message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  .error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="../static/profilestyle.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Login</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-messages">
+        {% for category, message in messages %}
+          <div class="flash-message {{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <div class="profile-details">
+    <h1>User Profile</h1>
+    <table>
+      <tr>
+        <th>Username:</th>
+        <td>{{ username }}</td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td>{{ email }}</td>
+      </tr>
+      <tr>
+        <th>Phone Number:</th>
+        <td>{{ phone_number }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="profile-actions">
+    <a href="/edit_profile" class="edit-link">Edit Profile</a>
+    <form action="/delete_profile" method="post" onsubmit="return confirm('Are you sure you want to delete your profile?');">
+      <input type="submit" value="Delete Profile" class="delete-button">
+    </form>
+  </div>  
+</body>
+</html>
