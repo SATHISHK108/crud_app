@@ -5,7 +5,6 @@ from sqlalchemy.exc import IntegrityError
 from dotenv import load_dotenv
 import os
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(16).hex()
 bcrypt = Bcrypt(app)
